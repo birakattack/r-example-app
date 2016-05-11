@@ -1,13 +1,13 @@
 import './EditSubreddit.less';
 import React from 'react';
 import flatten from 'lodash/array';
-import Input from '../../common/Input';
-import Textarea from '../../common/Textarea';
-import Loading from '../../common/Loading';
+import Input from '../common/Input';
+import Textarea from '../common/Textarea';
+import Loading from '../common/Loading';
 import { connect } from 'react-redux';
 import { createSelector } from 'reselect';
-import * as editSubredditActions from '../../../actions/editSubreddit';
-import { LANGUAGES } from '../../../../lib/constants';
+import * as editSubredditActions from '../../actions/editSubreddit';
+import { LANGUAGES } from '../../../lib/constants';
 
 const NAV_ITEMS = [
   ['Basic Info', 'navBasic'],

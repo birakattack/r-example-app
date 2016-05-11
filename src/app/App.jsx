@@ -3,7 +3,7 @@ import React from 'react';
 import Header from './components/presentation/header/Header';
 import LandingPage from './components/presentation/landingpage/LandingPage';
 import Dashboard from './components/dashboard/Dashboard';
-import EditSubreddit from './components/presentation/modTools/EditSubreddit';
+import EditSubreddit from './components/modTools/EditSubreddit';
 import { Anchor, UrlSync } from '@r/platform/components';
 import { PageSelector, Page } from '@r/platform/page';
 
