@@ -286,9 +286,11 @@ class EditSubreddit extends React.Component {
 const selector = createSelector(
   (state) => state.editSubreddit.navState,
   (state) => state.moddedSubs.data[state.platform.currentPage.urlParams.subredditUUID],
-  (navState, subreddit) => ({
+  (state) => state.editSubreddit.settings[0],
+  (navState, subreddit, settings) => ({
     navState,
     subreddit,
+    settings,
   })
 );
 
