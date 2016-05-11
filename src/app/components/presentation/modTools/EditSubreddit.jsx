@@ -249,6 +249,27 @@ class EditSubreddit extends React.Component {
     );
   }
 
+  renderWiki() {
+    const { wikiMode, wikiEditAge, wikiEditKarma } = this.props.settings;
+    const { navState } = this.props;
+
+    return page(
+      navState === 'navWiki',
+      box(
+        header('Wiki'),
+        radioTable(
+          radioTableRow('wikimode', 'disabled', wikiMode, 'disabled', TEXT.WIKI.DISABLED),
+          radioTableRow('wikimode', 'modonly', wikiMode, 'mod editing', TEXT.WIKI.MOD_EDIT),
+          radioTableRow('wikimode', 'anyone', wikiMode, 'anyone', TEXT.WIKI.ANYONE)
+        ),
+        miniHeader(TEXT.WIKI.KARMA_HEAD),
+        input('wiki_edit_karma', wikiEditKarma, TEXT.WIKI.KARMA_VAL),
+        miniHeader(TEXT.WIKI.AGE_HEAD),
+        input('wiki_edit_age', wikiEditAge, TEXT.WIKI.AGE_VAL)
+      )
+    );
+  }
+
   render() {
     return (
       <div className='EditSubreddit'>
@@ -273,6 +294,7 @@ class EditSubreddit extends React.Component {
             { this.renderBasicInfo() }
             { this.renderSidebar() }
             { this.renderSubmissionText() }
+            { this.renderWiki() }
           </div>
           <div className='EditSubreddit__contentBottom'>
             
