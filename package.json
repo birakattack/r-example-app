@@ -7,7 +7,7 @@
     "server": "node ./bin/ProductionServer.js"
   },
   "dependencies": {
-    "@r/api-client": "git://github.com/reddit/node-api-client.git#3X",
+    "@r/api-client": "git://github.com/birakattack/node-api-client.git#feature/add_query_options",
     "@r/build": "0.0.12",
     "@r/middleware": "0.5.3",
     "@r/platform": "0.0.27",
